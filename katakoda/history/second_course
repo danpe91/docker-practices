@@ -1,0 +1,12 @@
+vi Dockerfile
+ # FROM nginx:alpine
+ # COPY . /usr/share/nginx/html
+
+vi index.html
+ # <h1> Hello world! <!h1>
+
+docker build -t nginx-webserver-image:v1 .
+docker image ls
+docker container  run -d -p 80:80 --name nginx-hello-world nginx-webserver-image:v1
+curl localhost
+docker container  ls

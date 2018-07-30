@@ -1,0 +1,18 @@
+### Beginning of first Katacoda course ###
+ # using redis container #
+docker search redis
+docker pull redis
+docker run -d redis
+docker ps
+docker inspect 3b
+docker logs 3b
+docker run -d --name my-redis -p 6379:6379 redis
+docker run -d --name my-redis-dynamic -p 6379 redis
+docker port my-redis-dynamic  6379
+docker port my-redis 6379
+docker ps
+sudos u
+sudo su
+docker run -d --name redix-mapped -v /opt/docker/data/redis:/data redis
+docker run -d --name redix-mapped-ported -p 16379:6379 -v /opt/docker/data/redis:/data redis
+### End of first Katacoda course ###
